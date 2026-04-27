@@ -10,4 +10,4 @@ metadata:
 spec:
   type: service
   lifecycle: dev
-  owner: ${{ values.owner | quote}}
+  owner: ${{ values.owner | dump }}
