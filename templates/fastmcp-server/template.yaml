@@ -115,12 +115,12 @@ spec:
     #       - push
     #     webhookSecret: pac-webhook-shared-secret
 
-    # - id: registerCatalog
-    #   name: Register in Backstage Catalog
-    #   action: catalog:register
-    #   input:
-    #     repoContentUrl: ${{ steps.publishSource.output.repoContentUrl }}
-    #     catalogInfoPath: /catalog-info.yaml
+    - id: registerCatalog
+      name: Register in Backstage Catalog
+      action: catalog:register
+      input:
+        repoContentUrl: ${{ steps.publishSource.output.repoContentUrl }}
+        catalogInfoPath: /catalog-info.yaml
 
   output:
     links:
