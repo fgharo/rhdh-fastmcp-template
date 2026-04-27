@@ -119,8 +119,9 @@ spec:
       name: Register in Backstage Catalog
       action: catalog:register
       input:
-        repoContentUrl: ${{ steps.publishSource.output.repoContentUrl }}
-        catalogInfoPath: /catalog-info.yaml
+        catalogInfoUrl: ${{ steps.publishSource.output.remoteUrl }}
+        # repoContentUrl: ${{ steps.publishSource.output.repoContentUrl }}
+        # catalogInfoPath: /catalog-info.yaml
 
   output:
     links:
