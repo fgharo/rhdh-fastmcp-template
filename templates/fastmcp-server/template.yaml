@@ -120,10 +120,10 @@ spec:
       action: catalog:register
       input:
         # catalogInfoUrl: ${{ steps.publishSource.output.remoteUrl }}
-        catalogInfoUrl: ${{ steps.publishSource.output.remoteUrl | replace(".git", "") }}/blob/main/catalog-info.yaml
+        # catalogInfoUrl: ${{ steps.publishSource.output.remoteUrl | replace(".git", "") }}/blob/main/catalog-info.yaml
 # https://github.com/rhdh-exploration-org/cmp-mcp-20/blob/main/catalog-info.yaml
-        # repoContentUrl: ${{ steps.publishSource.output.repoContentUrl }}
-        # catalogInfoPath: /catalog-info.yaml
+        repoContentUrl: ${{ steps.publishSource.output.repoContentUrl }}
+        catalogInfoPath: /catalog-info.yaml
 
   output:
     links:
