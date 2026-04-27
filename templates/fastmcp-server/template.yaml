@@ -102,6 +102,7 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         defaultBranch: main
         sourcePath: ./source
+        repoVisibility: public
         description: ${{ parameters.description }}
 
     # - id: createWebhook
