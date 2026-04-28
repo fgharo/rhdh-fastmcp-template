@@ -8,11 +8,12 @@ metadata:
     tektonci/build-namespace: ${{ values.namespace }}
     janus-idp.io/tekton: ${{ values.name }}-ci-cd
   links:
-      - title: Open in Dev Spaces (VS Code)
-        # Constructing the Factory URL
-        # Assuming your devspaces host is something like devspaces.apps.cluster...
-        url: https://devspaces.${{ values.clusterDomain }}/#${{ steps['publishSource'].output.remoteUrl | replace(".git", "") }}
-        icon: web
+  - title: Open in Dev Spaces (VS Code)
+    # Constructing the Factory URL
+    # Assuming your devspaces host is something like devspaces.apps.cluster...
+    # url: https://devspaces.${{ values.clusterDomain }}/#${{ steps['publishSource'].output.remoteUrl | replace(".git", "") }}
+    url: https://devspaces.apps.cluster-dzdrz.dzdrz.sandbox3547.opentlc.com/#https://${{values.destination.host}}/${{ values.destination.owner + "/" + values.destination.repo }}
+    icon: web
 spec:
   type: service
   lifecycle: dev
