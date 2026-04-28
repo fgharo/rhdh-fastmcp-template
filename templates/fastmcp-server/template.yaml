@@ -102,7 +102,7 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         defaultBranch: main
         sourcePath: ./source
-        repoVisibility: "internal"
+        repoVisibility: "public"
         description: ${{ parameters.description }}
 
     # - id: createWebhook
@@ -123,7 +123,7 @@ spec:
         # catalogInfoUrl: ${{ steps.publishSource.output.remoteUrl }}
         # catalogInfoUrl: ${{ steps.publishSource.output.remoteUrl | replace(".git", "") }}/blob/main/catalog-info.yaml
 # https://github.com/rhdh-exploration-org/cmp-mcp-20/blob/main/catalog-info.yaml
-        repoContentUrl: ${{ steps.publishSource.output.repoContentUrl }}
+        repoContentsUrl: ${{ steps.publishSource.output.repoContentsUrl }}
         catalogInfoPath: /catalog-info.yaml
 
   output:
